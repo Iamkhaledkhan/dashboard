@@ -1,0 +1,513 @@
+body {
+	overflow-x: hidden;
+}
+
+input,
+input::-webkit-input-placeholder {
+	font-size: 12px;
+	color: #85a5c2 !important;
+}
+
+
+/*Global css*/
+
+.color-blue {
+	color: #85a5c2;
+}
+
+.card-border {
+	border-radius: 15px;
+}
+
+
+/*Global css End*/
+
+
+/*Left -side-bar*/
+
+aside.left-sidebar {
+	background: #3b76ef;
+	padding: 35px 15px;
+	border-top-left-radius: 35px;
+	border-bottom-left-radius: 35px;
+}
+
+
+/*Main content*/
+
+
+/*Overlay background*/
+
+.main-content-background-overlay {
+	background: #3b76ef;
+	height: 100%;
+	position: absolute;
+	width: 50%;
+	z-index: -1;
+}
+
+.main-content-wrap {
+	background: #f4faff;
+	border-radius: 50px;
+}
+
+
+/* Serach Form*/
+
+.has-search .form-control {
+	padding-left: 2.375rem;
+}
+
+.has-search .search-btn {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	width: 2.375rem;
+	height: 2.375rem;
+	line-height: 2.275rem;
+	text-align: center;
+	pointer-events: none;
+}
+
+span.search-btn img {
+	width: 18px;
+	height: 18px;
+}
+
+
+/* Progress bar css*/
+
+.card-progress-vertical-wrap {
+	background: #3b76ef;
+}
+
+.progress-bar-horizontal-wrap {
+	background: #63c7ff;
+}
+
+.progress-bar-circular-wrap {
+	background: #a66dd4;
+}
+
+.progress-bar-vertical {
+	width: 5px;
+	min-height: 50px;
+	display: flex;
+	align-items: flex-end;
+	margin-right: 10px;
+	float: left;
+}
+
+.progress-bar-vertical .progress-bar {
+	width: 100%;
+	height: 0;
+	-webkit-transition: height 0.6s ease;
+	-o-transition: height 0.6s ease;
+	transition: height 0.6s ease;
+}
+
+
+/*Circular Progress*/
+
+.circular-progress {
+	width: 60px;
+	height: 60px;
+	line-height: 150px;
+	background: none;
+	margin: 0 auto;
+	box-shadow: none;
+	position: relative;
+}
+
+.circular-progress:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 7px solid #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.circular-progress>span {
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.circular-progress .progress-left {
+	left: 0;
+}
+
+.circular-progress .progress-bar {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border-width: 7px;
+	border-style: solid;
+	position: absolute;
+	top: 0;
+	border-color: #fff;
+}
+
+.circular-progress .progress-left .progress-bar {
+	left: 100%;
+	border-top-right-radius: 75px;
+	border-bottom-right-radius: 75px;
+	border-left: 0;
+	-webkit-transform-origin: center left;
+	transform-origin: center left;
+}
+
+.circular-progress .progress-right {
+	right: 0;
+}
+
+.circular-progress .progress-right .progress-bar {
+	left: -100%;
+	border-top-left-radius: 75px;
+	border-bottom-left-radius: 75px;
+	border-right: 0;
+	-webkit-transform-origin: center right;
+	transform-origin: center right;
+}
+
+.circular-progress .progress-value {
+	display: flex;
+	border-radius: 50%;
+	font-size: 10px;
+	text-align: center;
+	line-height: 20px;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	font-weight: bold;
+}
+
+.circular-progress .progress-value span {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.circular-progress[data-percentage="10"] .progress-right .progress-bar {
+	animation: loading-1 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="10"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.circular-progress[data-percentage="20"] .progress-right .progress-bar {
+	animation: loading-2 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="20"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.circular-progress[data-percentage="30"] .progress-right .progress-bar {
+	animation: loading-3 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="30"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.circular-progress[data-percentage="40"] .progress-right .progress-bar {
+	animation: loading-4 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="40"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.circular-progress[data-percentage="50"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="50"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.circular-progress[data-percentage="60"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="60"] .progress-left .progress-bar {
+	animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.circular-progress[data-percentage="70"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="70"] .progress-left .progress-bar {
+	animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.circular-progress[data-percentage="80"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="80"] .progress-left .progress-bar {
+	animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.circular-progress[data-percentage="90"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="90"] .progress-left .progress-bar {
+	animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.circular-progress[data-percentage="100"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.circular-progress[data-percentage="100"] .progress-left .progress-bar {
+	animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(36);
+		transform: rotate(36deg);
+	}
+}
+
+@keyframes loading-2 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(72);
+		transform: rotate(72deg);
+	}
+}
+
+@keyframes loading-3 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(108);
+		transform: rotate(108deg);
+	}
+}
+
+@keyframes loading-4 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(144);
+		transform: rotate(144deg);
+	}
+}
+
+@keyframes loading-5 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(180);
+		transform: rotate(180deg);
+	}
+}
+
+.circular-progress {
+	margin-top: 1em;
+}
+
+.pg-value-text {
+	width: 30px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	line-height: 30px;
+}
+
+
+/*Your Coaches Section*/
+
+.coach-profile-info {
+	background: #eef7fe;
+	padding: 15px;
+	border-radius: 15px;
+	margin: 15px 0;
+}
+
+.act-btn button {
+	background: #e2f8e4;
+	color: #48d750;
+}
+
+.author-btn button {
+	background: #e8e8f8;
+	color: #6062ff;
+}
+
+.rs-logo {
+	width: 50px;
+	background: #eef7fe;
+	padding: 10px;
+	margin: auto;
+	height: 50px;
+	border-radius: 10px;
+}
+
+.percent-achieve .circular-progress {
+	width: 25px !important;
+	height: 25px !important;
+}
+
+.percent-achieve .circular-progress {
+	margin-top: 0;
+}
+
+.percent-achieve .circular-progress .progress-bar {
+	border-color: #3b76ef;
+}
+
+
+/*Right Sidebar*/
+
+
+/*Right Sidebar Section 2*/
+
+.card-profile-info {
+	background: #f4faff;
+	text-align: center;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.blood-group,
+.height {
+	padding: 0 15px;
+	border-right: 1px solid #d4e3f0;
+}
+
+.weight {
+	padding: 0 15px;
+}
+
+
+/*Right Sidebar Section 3*/
+
+.calender.active {
+	background: #3b76ef;
+	color: #fff;
+	padding: 10px 5px;
+	border-radius: 20px;
+}
+
+
+/*Right sidebar section 4*/
+
+.match-card-bg {
+	background: #3b76ef;
+}
+
+.card-profile-match {
+	background: url(../images/medal@2x.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.group {
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+}
+
+.group .item {
+	padding: 2px;
+	width: 52px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.group .item:nth-child(n + 2) {
+	margin-left: -30px;
+}
+
+.group .item .circle {
+	background: #afddfe;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.group .item:last-child .circle {
+	background: #224ca4;
+}
+
+.group .item .text {
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.group .item .image {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+/*Right Sidebar Section 5*/
+
+.health-card,
+.pws-card {
+	padding: 15px;
+	background: #f4faff;
+}
+
+.card-profile-health {
+	background: url(../images/caduceus.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.follow-up button {
+	background: #d8f2ff;
+}
+
+.follow-up button {
+	background: #d8f2ff;
+	color: #26a7e7;
+	margin-top: 10px;
+}
+
+
+/*Section */
+
+.card-profile-workout {
+	background: url(../images/lotus.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
